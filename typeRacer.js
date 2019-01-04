@@ -1,9 +1,9 @@
 let interval;
-let score = 100;
+let score = 0;
 let index;
-let time = 1000;
+let intervalTime = 1000;
 let alphabet = "";
-
+let time = 60;
 let getRandomNumber = function (max, min) {
   return String.fromCharCode(Math.floor(Math.random() * (max - min + 1) + min));
 }
@@ -13,26 +13,26 @@ let startGame = function () {
     setInterval(() => {
       alphabet = getRandomNumber(65, 91);
       document.getElementById("letter").innerHTML = alphabet;
-    }, time);
+      document.getElementById("timer").innerHTML = "Timer 00:" + --time;
+      if (isEqualsZero(time)) {
+        document.getElementById("letter").innerHTML = "Game Over";
+        clearInterval(interval);
+      }
+    }, intervalTime);
 }
 
-let getInput = function (event) {
+let isEqualsZero = function (arg) {
+  return arg == 0;
+}
+
+let checkInput = function (event) {
   let inputLetter = event.key.toUpperCase();
   if (alphabet == inputLetter) {
     score += 10;
     print(score);
   }
-  if (alphabet != inputLetter && score > 0) {
-    score -= 10;
-    print(score);
-  }
 }
 
 let print = function (score) {
-  if (score == 0) {
-    document.getElementById("letter").innerHTML = "Game Over";
-    clearInterval(interval);
-    score = 0;
-  }
   document.getElementById("score").innerHTML = "score : " + score;
 }

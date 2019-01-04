@@ -8,7 +8,16 @@
   <script src="typeRacer.js"></script>
 </head>
 
-<body onload="startGame()" onkeypress="getInput(event)">
+<body onload="startGame()" onkeypress="checkInput(event)">
+
+  <div class="timeScore">
+    <div style="float: left" class="timer">
+      <pre id="timer">Timer  1:00</pre>
+    </div>
+    <div class=" score">
+      <pre id="score">score : 0</pre>
+    </div>
+  </div>
   <div class="game" id="gameBody">
     <div class="heading">
       Enter Letter
@@ -17,7 +26,6 @@
       D
       <div id="gameOver"></div>
     </div>
-    <div class="score" id="score">score : 100</div>
   </div>
   <div id="output"></div>
 </body>

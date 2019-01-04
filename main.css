@@ -9,10 +9,6 @@
   font-size: 35px;
 }
 
-input {
-  height: 20%;
-}
-
 .startButton {
   margin-top: 3%;
   font-size: 25px;
@@ -33,10 +29,22 @@ input {
   border-radius: 100%;
 }
 
+.score {
+  margin-left: 25%;
+}
+
 td {
   width: 50%;
 }
 
-.score {
-  margin-top: 5%;
+input {
+  height: 20%;
+}
+
+.timeScore {
+  font-size: 35px;
+  position: relative;
+  left: 400px;
+  top:100px;
+  padding: 2px;
 }
