@@ -1,0 +1,42 @@
+.Rect {
+  border-radius: 25%;
+  width: 35%;
+  background-color: chocolate;
+  padding: 2%;
+  margin-top: 5%;
+  margin-left: 32%;
+  text-align: center;
+  font-size: 35px;
+}
+
+input {
+  height: 20%;
+}
+
+.startButton {
+  margin-top: 3%;
+  font-size: 25px;
+}
+
+.heading {
+  margin-left: 2%;
+}
+
+.game {
+  font-size: 25px;
+  text-align: center;
+  width: 20%;
+  padding: 6%;
+  margin-top: 10%;
+  margin-left: 33%;
+  background-color: rgb(122, 211, 233);
+  border-radius: 100%;
+}
+
+td {
+  width: 50%;
+}
+
+.score {
+  margin-top: 5%;
+}
