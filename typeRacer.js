@@ -4,6 +4,7 @@ let index;
 let intervalTime = 1000;
 let alphabet = "";
 let time = 60;
+
 let getRandomNumber = function (max, min) {
   return String.fromCharCode(Math.floor(Math.random() * (max - min + 1) + min));
 }
